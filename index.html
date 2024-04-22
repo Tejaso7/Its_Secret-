@@ -54,6 +54,63 @@
   .download-btn:hover {
     background-color: #0056b3;
   }
+  
+  .heart {
+    position: absolute;
+    top: -40px;
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 90px;
+    background-color: #f00;
+    transform: rotate(-45deg);
+    border-radius: 50px 50px 0 0;
+  }
+
+  .heart::before,
+  .heart::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #f00;
+    border-radius: 50%;
+  }
+
+  .heart::before {
+    left: -50px;
+  }
+
+  .heart::after {
+    left: 50px;
+  }
+
+  .image-container {
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .image-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .image-container .heart-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    z-index: 0;}
 </style>
 </head>
 <body>
@@ -72,6 +129,19 @@
 
   <a href="Bond.zip" class="download-btn" download>Anaconda & Bond Documentation</a>
   <a href="CL III.pdf" class="download-btn" download> Write-Script & Jupyter Documentation</a>
+
+<!-- Image container with heart overlays -->
+  <div class="image-container">
+    <div class="heart"></div>
+    <img src="https://media.licdn.com/dms/image/D4D03AQGdIbLS80kAQA/profile-displayphoto-shrink_800_800/0/1694715067631?e=1719446400&v=beta&t=TQKGmH3fJgUsX0Oe8FGNvBGwZedipyMkt1x8HKhF3zg" alt="Image 1">
+    <div class="heart-overlay"></div>
+  </div>
+  <div class="image-container" style="margin-top: 20px;">
+    <div class="heart"></div>
+    <img src="div.jpg" alt="Image 2">
+    <div class="heart-overlay"></div>
+  </div>
+  
 
 </div>
 </body>
